@@ -1,0 +1,193 @@
+
+
+#User Profile API (get request) with authentication
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Njk4ODk1NTgsImV4cCI6MTY2OTg5MzE1OCwiYXVkIjoiNjM4ODdlMTYzZTU1OGU5Y2QwMWUyNDE0IiwiaXNzIjoid3d3LlN1cGVyZml0LmNvbSJ9.vOoFXLfaY-rcTLlNSynE0GJHoYr7H4wiRbnjZmZpbpc
+
+###Login user with hash password 
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "ahmed@gmail.com",
+    "password": "1234"
+}
+
+###Login registration with hash password 
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "fullname": "ahmed",
+    "email":"ahmed@gmail.com",
+    "password": "1234"
+}
+###getting mealsplan from the User mealsplan table
+DELETE   http://localhost:3000/auth/users/63826c0537a73eb808620617   
+Content-Type: application/json
+
+###getting workoutplans from the User workoutplans table
+GET  http://localhost:3000/auth/users    
+Content-Type: application/json
+###Adding Workouts to the Workouts plan table
+POST http://localhost:3000/auth/workouts    
+Content-Type: application/json
+
+{
+    "name": "Pullup",
+    "sets": 4,
+    "reps": 12,
+    "description":"Crossfit named workouts of the day",
+    "video_link":"https://youtu.be/tzD9BkXGJ1l",
+    "calories_burnt": 200
+}
+
+###Adding Meal to the Meals table
+POST        
+Content-Type: application/json
+
+{
+    "name": "Ham & Cheese Sandwich",
+    "serving": "146.0 g",
+    "description": "Sliced bread, sliced cheese, and sliced cooked ham",
+    "calories": 352,
+    "carbohydrates":"33.3 g",
+    "fiber": "0.0 g",
+    "sugars": "0.0 g",
+    "fat": "15.5 g",
+    "saturated": "6.4 g",
+    "poly_unsaturated": "1.4 g",
+    "mono_unsaturated": "6.7 ",
+    "cholestrol": "58.4 mg",
+    "sodium": "0.8 g",
+    "potassium": "290.5 mg",
+    "vitamin_A": "0.1 mg",
+    "vitamin_C": "2.8 mg",
+    "calcium": "129.9 mg",
+    "iron": "3.2 mg"
+}
+
+###getting meals from the meals plan table
+GET  http://localhost:3000/auth/meals    
+Content-Type: application/json
+
+###Getting meals by its ID from the meals plan table
+GET  http://localhost:3000/auth/meals/6351797a3b37c2001dfd3559
+Content-Type: application/json
+
+###getting Workouts from the Workouts plan table
+GET  http://localhost:3000/auth/workouts    
+Content-Type: application/json
+
+###Getting Workout by its ID from the Workouts plan table
+GET  http://localhost:3000/auth/workouts/635166a867bc8db6b1805007
+Content-Type: application/json
+
+###Adding mealplan to the user_meal_plan table
+POST http://localhost:3000/auth/mealplan   
+Content-Type: application/json
+
+{
+    "Plan_type": "Vegetarian",
+    "Meal_Breakfast":["Gouda Cheese on Rye Sandwich ; 192 Calories; 1 slice regular Rye bread, 1 tsp Butter, 3/4 oz Gouda cheese","Java Banana Quinoa Smoothie ; 820 Calories; 1 1/2 cup (8 fl oz) Coffee, 1 cup Quinoa, 1 tbsp ground Flaxseed, 1 medium (7 to 7-7/8 long) Banana, 5 cube Ice cubes, 1 tbsp Cocoa, 1 cup Pure Almond Almondmilk, 1 tsp Vanilla Extract","Spread butter on the bread. Put the cheese slice on top. Bring slices together. Heat in a toaster if desired (optional). ","Brew coffee. Combine all ingredients in a blender and pulse until smooth. Enjoy! "],
+    "Meal_Lunch":["Quick & Easy Vegan Caesar Salad ; 435 Calories; 3/4 fruit, without skin and seed Avocados, 2 1/4 tbsp Lemon juice, 1 1/2 tbsp Water, 2 1/4 cloves minced Garlic, 3/4 tbsp drained Capers, 1 1/2 tsp Dijon mustard, 3/4 dash Salt, 3 tbsp Seeds hemp seed hulled, 9 cup shredded Lettuce","Peanut Butter Protein Milkshake ; 937 Calories; 12 oz Reduced Fat Milk, 3/4 cup Vanilla ice cream, 1 medium (7 to 7-7/8 long) Banana, 4 tbsp Peanut butter, 1/2 scoop (30g) Whey protein powder","Add avocado, lemon juice, water, garlic, capers, mustard, salt and pepper to a food processor or blender. Blend until smooth. Add a bit more water if it needs to be thinned out. Spoon dressing into a bowl and stir in hemp seeds. Place chopped romaine in a large salad bowl, and dressing and stir until combined. ","Combine all ingredients in a blender and pulse until smooth. Enjoy! "],
+     "Meal_Dinner":["Spinach & Bean Chipotle Casserole; 1076 Calories; 1 1/2 cup White beans, 6 cup Spinach, 3 1/2 cup Tomatoes, 1/2 cup Bulgur, 1 medium (2-1/2 dia) Onions, 3 clove Garlic, 2 cup Water, 1/2 tsp leaves Oregano, 1 tsp Paprika, 1 1/2 tsp ground Cumin, 1 lime yields Lime juice, 2 sprigs Fresh cilantro, 1 tbsp Olive oil, 1 dash Pepper", "Sprout Salad; 357 Calories; 1 fruit without skin and seed Avocados, 1 cup Alfalfa sprouts, 1 cup slices Radishes, 1/2 cup Mung beans, 4 cup Spinach, 1 cup, chopped or sliced Tomatoes, 2 tbsp Balsamic vinegar","Finely chop onion and crush garlic. Heat olive oil in a large saucepan over medium heat. Fry finely chopped onion, crushed garlic with paprika and cumin until golden and soft. Add chopped tomatoes, bulgur, spinach and water. Add oregano. Bring to boil. Cook under medium heat until bulgur is cooked and liquid has thicken (around 15 mins). Rinse and drain the beans. Pour on top of spinach mixture. Cook for another 3 mins or so until the beans are hot. Add lime juice. Season to taste. Serve with fresh cilantro sprinkled on top. Enjoy! ","Slice radishes. Chop avocado and tomatoes. Toss all ingredients together well and serve. Enjoy! "],
+    "Meal_Calories": 3800
+}
+###getting mealsplan from the User mealsplan table
+GET  http://localhost:3000/auth/mealplan    
+Content-Type: application/json
+
+###Adding workplan to the user_meal_plan table
+POST http://localhost:3000/auth/workoutplan    
+Content-Type: application/json
+
+{
+    "Plan_Name": "Power Hour",
+    "Workout_Id": "635166a867bc8db6b1805007",
+    "User_Id": "6353f0e94e2f462a8f948fdd"
+}
+
+###getting mealsplan from the User mealsplan table
+GET  http://localhost:3000/auth/user-response    
+Content-Type: application/json
+
+
+###getting mealsplan from the User mealsplan table
+DELETE   http://localhost:3000/auth/user-response/63826c2137a73eb80862061b    
+Content-Type: application/json
+
+
+###Getting mealplan by its ID from the User mealsplan table
+GET  http://localhost:3000/auth/mealplan/635a935c48a9676e554eee6d
+Content-Type: application/json
+
+###getting mealsplan from the User mealsplan table
+DELETE   http://localhost:3000/auth/mealplan/6378e8b2843e8926f07fbab9    
+Content-Type: application/json
+
+###getting workoutplans from the User workoutplans table
+GET  http://localhost:3000/auth/workoutplan    
+Content-Type: application/json
+
+###Getting workoutplans by its ID from the User workoutplans table
+GET  http://localhost:3000/auth/workoutplan/635a9ba9031828eaf17e8d1e
+Content-Type: application/json
+
+###Adding Questions to the Questions table
+POST http://localhost:3000/auth/questions    
+Content-Type: application/json
+
+{
+    "Question_type": "Preference",
+    "Question_text": "Choose your preference when it comes to food?",
+    "Question_status":true
+}
+
+###getting workoutplans from the User workoutplans table
+GET  http://localhost:3000/auth/questions    
+Content-Type: application/json
+
+
+###Adding Questions to the Questions table
+POST http://localhost:3000/auth/user-response   
+Content-Type: application/json
+
+{
+    "User_id": "63887e163e558e9cd01e2414",
+    "User_response_num": [65,187,24],
+    "User_response_str": ["male", "Sedentary", "Gain a little"],
+    "User_mealplan_id": "6"
+}
+
+###Getting mealplan by its ID from the User mealsplan table
+GET  http://localhost:3000/auth/user-response
+Content-Type: application/json
+
+###Getting mealplan by its ID from the User mealsplan table
+GET  http://localhost:3000/auth/mealplan/6378e8b2843e8926f07fbab9
+Content-Type: application/json
+
+
+###Getting mealplan by its ID from the User mealsplan table
+GET  http://localhost:3000/auth/mealplan/2800/Anything 
+Content-Type: application/json
+
+###Getting mealplan by its ID from the User mealsplan table
+PUT http://localhost:3000/auth/user-response/63826c0537a73eb808620617
+Content-Type: application/json
+{
+    "User_id": "63826c0537a73eb808620617",
+    "User_response_num": [65,187,24],
+    "User_response_str": ["male", "Sedentary", "Gain a little"],
+    "User_mealplan_id": "637a2845e9bd442f9451c8af"
+}
+
+###Getting mealplan by its ID from the User mealsplan table
+PUT http://localhost:3000/auth/register/63886b22621dad4de231f23c
+Content-Type: application/json
+{
+    "fullname": "ShahzaibAhmed",
+    "email":"ShahzaibAhmed@gmail.com",
+    "password": "1234"
+}

@@ -1,0 +1,64 @@
+.Question {
+    display: flex;
+    min-height: 100vh;
+    background-image: url("./Images/login1.jpg");
+    opacity: 0.9;
+}
+
+.Box {
+    border: 5px solid black;
+    text-align: center;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    opacity: 1;
+    background-image: url("./Images/card-background.jpg");
+  }
+.heading {
+    background-color: #FF265D;
+    padding-bottom:1px;
+    padding-top: 1px;
+    color: white;
+    border-radius: 15px;
+}
+.Question-buttons{
+    padding-top: 30px;
+    background-image: url("./Images/card-background.jpg");
+}
+.Question-buttons button:hover {
+    background-color: #FF265D;
+}
+.Question-buttons button{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: transparent;
+    color: black;
+    margin-top:20px;
+    cursor: pointer;
+    border: solid 0.5px gray;
+}
+#input-age {
+    background-color: rgb(229, 229, 229);
+    border: 1px solid black;
+    width: 250px;
+    margin-top: 90px;
+}
+#button-age {
+    padding: 10px 30px;
+    color: white;
+    background-color: #b63a59;
+}
+
+.m-2{
+    margin-top: 60px;
+}
+.m-2 button{
+    padding: 10px;
+    padding-right: 70px;
+    padding-left: 70px;
+    ;
+}

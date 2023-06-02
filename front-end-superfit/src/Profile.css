@@ -1,0 +1,33 @@
+.outer {
+  position:relative;
+  width: 50%;
+  min-height: 400px;
+  background: red;
+  padding: 10px;
+  display: flex;
+  margin: auto;
+  margin-top: 200px;
+}
+
+.inner {
+  width: 80%;
+  margin-top: 70px;
+}
+
+.inner1 {
+  background: green;
+  height: 400px;
+}
+
+.inner2 {
+  background: blue;
+  height: 400px;
+  margin-left: 20px;
+}
+.card img {
+  width: 50%;
+}
+.card {
+  position: relative; 
+  text-align: center;
+}
